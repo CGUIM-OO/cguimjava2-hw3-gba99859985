@@ -8,12 +8,14 @@ public class HW3 {
 		//String testn= sc.nextLine(); 
 		int nDeck=1;
 		Deck deck=new Deck(nDeck);
-		//TODO: please check your output, make sure that you print all cards on your screen
+		//TODO: //TODO: please check your output, make sure that you print newCard and newCard2 on your screen
+		deck.printDeck();
 		Card newCard=deck.getOneCard();
 		newCard.printCard();
 		deck.shuffle();
 		Card newCard2=deck.getOneCard();
 		newCard2.printCard();
+		deck.shuffle();
 		if(isAllCardsCorrect(deck.getAllCards(),nDeck)){
 			if(!isShuffleWorking(deck,newCard,newCard2)){
 				System.out.println("All Card: Well done! But shufller is not working");
@@ -30,6 +32,7 @@ public class HW3 {
 	 * This method is used for checking your result, not a part of your HW3
 	 */
 	private static boolean isShuffleWorking(Deck deck,Card newCard,Card newCard2){
+		deck.shuffle();
 		boolean isCorrect=true;
 		if(newCard.getSuit().equals(newCard2.getSuit()) &&
 				newCard.getRank()==newCard2.getRank()){
@@ -39,7 +42,7 @@ public class HW3 {
 		for(int i=0;i<53;i++){
 			deck.getOneCard();
 		}
-		if(deck.nUsed!=2){
+		if(deck.nUsed!=1){
 			isCorrect=false;
 		}
 		return isCorrect;
