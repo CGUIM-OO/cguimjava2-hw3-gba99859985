@@ -8,11 +8,9 @@ public class HW3 {
 		//String testn= sc.nextLine(); 
 		int nDeck=1;
 		Deck deck=new Deck(nDeck);
-		//TODO: //TODO: please check your output, make sure that you print newCard and newCard2 on your screen
-		deck.printDeck();
+		//TODO: please check your output, make sure that you print newCard and newCard2 on your screen
 		Card newCard=deck.getOneCard();
 		newCard.printCard();
-		deck.shuffle();
 		Card newCard2=deck.getOneCard();
 		newCard2.printCard();
 		deck.shuffle();
